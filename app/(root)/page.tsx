@@ -40,6 +40,7 @@ const Home = () => {
                         height={600}
                     />
                 </div>
+                
             </section>
     </div>
   );
