@@ -40,6 +40,13 @@ const SignUp = () => {
     try {
       const result  = await signUpWithEmail(data);
       if(result.success) router.push("/")
+        if(result.success){
+          toast.success(result.success)
+          router.push("/")
+        }
+        if(result.error){
+          toast.error(result.error)
+        }
     } catch (e) {
       console.log(e);
       toast.error('Sign up failed', {
